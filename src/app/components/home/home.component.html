@@ -1,0 +1,18 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Cinepelis App</h1>
+      <p class="lead">Encuentra los mejores estrenos y la mejor calidad 4D</p>
+    </div>
+</div>
+
+<div class="container">
+    <br>
+
+    
+
+    <app-galeria [peliculas]="cartelera" titulo = "Peliculas en Cartelera" ></app-galeria> <!-- DE ESTE LADO LO MANDO Y DONDE LO RECIBO ES CON UN INPUT-->
+    
+    <app-galeria [peliculas]="populares" titulo = "Populares" ></app-galeria>
+
+    <app-galeria [peliculas]="infantiles" titulo = "Infantiles" ></app-galeria>
+</div>

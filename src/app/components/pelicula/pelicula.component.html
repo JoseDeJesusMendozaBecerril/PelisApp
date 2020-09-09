@@ -1,0 +1,28 @@
+<div *ngIf="pelicula" 
+    class="container main-container">
+    {{pelicula.original_title}}
+    <div class="row">
+        <div class="col-md-5">
+            <img [src]="pelicula | peliculaImagen:true" [alt]="pelicula.original_title"
+            class="img-thumbnail img-fluid">
+        </div>
+        <div class="col-md-7">
+            <h3> Sinopsis</h3>
+            <hr>
+            <p>{{pelicula.overview}} </p>
+            <p>{{pelicula.tagline}}  </p>
+            <p>Calificacion <span class="badge badge-primary">{{pelicula.popularity| number:".2-2" }}/10
+            </span></p>
+            <p>Votos <span class="badge badge-success">{{pelicula.vote_average }}
+            </span></p>
+
+            <button [routerLink] = "['/'+regresarA, busqueda]" type="button" class="btn btn-outline-danger">
+                Regresar
+            </button>
+
+        </div>
+    </div>
+
+
+
+</div>
